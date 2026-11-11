@@ -1,16 +1,17 @@
 {
-  "source_file": "Fig1_AB_linked.ai",
-  "source_sha256": "6c96b9fc9a97d56b5adf5c22c5f0acaecddf8f250d47a12496cc394807298f49",
-  "rendering": "PDF-compatible Illustrator source rendered with Poppler at 360 dpi; original artwork and data retained.",
+  "rendering": "PDF-compatible source files rendered with Poppler at 360 dpi; original artwork and data retained.",
   "exports": [
     {
       "file": "dataset_overview.png",
       "crop_pixels_at_360_dpi": {
         "x": 180,
         "y": 260,
-        "width": 2630,
+        "width": 2795,
         "height": 885
-      }
+      },
+      "source_file": "Fig1_AB_linked.pdf",
+      "source_directory": "manuscript_pdf",
+      "source_sha256": "35da564dc8800d3f4d37ac451996621408f6d950cf13adff72ea8202ba559278"
     },
     {
       "file": "model_overview.png",
@@ -19,7 +20,10 @@
         "y": 1265,
         "width": 2630,
         "height": 950
-      }
+      },
+      "source_file": "Fig1_AB_linked.ai",
+      "source_directory": "ai",
+      "source_sha256": "6c96b9fc9a97d56b5adf5c22c5f0acaecddf8f250d47a12496cc394807298f49"
     }
   ],
   "layout_note": "Crops omit the source section letters and old model heading; section titles and captions are supplied in the main README."

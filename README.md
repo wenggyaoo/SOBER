@@ -1,7 +1,5 @@
 # SOBER
 
-**Molecular–spatial representation learning from multiplexed protein imaging.**
-
 **SOBER (Spatial Omics Biomarker Encoder)** is a cell-centered transformer that jointly represents protein expression and local tissue context. It combines intensity-weighted marker embeddings with center-relative positional encodings to represent each cell together with its spatial neighbors. Masked protein reconstruction predicts hidden center-cell intensities from visible markers and surrounding cells.
 
 ## Overview
