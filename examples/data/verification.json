@@ -1,0 +1,108 @@
+{
+  "verified_on": "2026-11-12",
+  "date_timezone": "Asia/Hong_Kong",
+  "method": "Recomputed full RDS MD5 checksums and compared every exported cell, marker value, label, and coordinate directly with the source SingleCellExperiment objects. Independently checked Zenodo license/creator metadata and scanned every locally converted region to verify the selection rule. For s240, compared all exported fields with the local CSVs, checked annotation-version selection, and verified membership in the saved patient split.",
+  "source_links": {
+    "damond_deposit": "https://zenodo.org/records/20623726",
+    "meyer_deposit": "https://zenodo.org/records/20541924",
+    "damond_preparation": "https://github.com/BodenmillerGroup/imcdatasets/blob/devel/inst/scripts/make-Damond-2019-Pancreas.Rmd",
+    "meyer_preparation": "https://github.com/BodenmillerGroup/imcdatasets/blob/devel/inst/scripts/make-Meyer-2025-TripleNegativeBreastCancer.Rmd",
+    "damond_acquisition": "https://pmc.ncbi.nlm.nih.gov/articles/PMC6821395/"
+  },
+  "original_rds_checks": {
+    "damond2019map": {
+      "source_md5": "cc2eebdfc3792aa08f9042d1006cdc7d",
+      "source_total_cells": 1776974,
+      "source_channels": 38,
+      "source_regions": 845,
+      "selected_region": "N43",
+      "selected_cells": 1500,
+      "exported_markers": 35,
+      "complete_region": true,
+      "cell_ids_and_order_match": true,
+      "author_labels_match": true,
+      "source_assay": "counts",
+      "max_intensity_absolute_error": 5.1514348342607263e-14,
+      "max_intensity_relative_error": 5.044793719672556e-15,
+      "coordinate_multiplier": 2,
+      "max_coordinate_absolute_error": 5.684341886080801e-13,
+      "max_coordinate_relative_error": 4.443481539957478e-15,
+      "sce_metadata_fields": {}
+    },
+    "meyer2025stratification": {
+      "source_md5": "cb99532b227c4a1db2b885034987e1f3",
+      "source_total_cells": 928993,
+      "source_channels": 39,
+      "source_regions": 450,
+      "selected_region": "ZTMA249.1_ZTMA249_ID_48_AX8Y6_30",
+      "selected_cells": 1500,
+      "exported_markers": 36,
+      "complete_region": true,
+      "cell_ids_and_order_match": true,
+      "author_labels_match": true,
+      "source_assay": "counts",
+      "max_intensity_absolute_error": 4.547473508864641e-13,
+      "max_intensity_relative_error": 5.070676122309669e-15,
+      "coordinate_multiplier": 2,
+      "max_coordinate_absolute_error": 5.229594535194337e-12,
+      "max_coordinate_relative_error": 4.7692363180513424e-15,
+      "sce_metadata_fields": {}
+    }
+  },
+  "local_csv_checks": [
+    {
+      "study": "damond2019map",
+      "regions_scanned": 845,
+      "selection": [
+        0,
+        "N43",
+        1500
+      ],
+      "all_exported_csv_values_match": true
+    },
+    {
+      "study": "meyer2025stratification",
+      "regions_scanned": 450,
+      "selection": [
+        0,
+        "ZTMA249.1_ZTMA249_ID_48_AX8Y6_30",
+        1500
+      ],
+      "all_exported_csv_values_match": true
+    }
+  ],
+  "publisher_checks": {
+    "rds_checksums_match_published_md5": true,
+    "both_dataset_licenses": "CC-BY-4.0",
+    "preparation_script_authors": {
+      "damond": "Nicolas Damond and Nils Eling",
+      "meyer": "Lasse Meyer"
+    }
+  },
+  "numeric_tolerance": "For each value, abs(exported - source) / max(1, abs(source)) < 1e-12. Observed errors are below 5.1e-15 for intensities and below 4.8e-15 for doubled coordinates, consistent with CSV serialization precision.",
+  "coordinate_scale_limit": "The factor-of-two coordinate conversion was verified numerically for both datasets. Damond reports approximately 1 micrometre acquisition resolution; Meyer physical calibration has not been independently verified against acquisition metadata. The tutorial uses the local converter setting of 1 micrometre per native unit.",
+  "training_scope_check": "The project crosswalk categorizes both collections as external. Neither selected region name appears in the recorded training/validation split. This is not an independent audit of patient or source-image overlap across differently named datasets. The added s240 region belongs to the internal training partition, not internal validation. Internal/external here refers to SOBER development, not whether a source study is publicly available.",
+  "internal_csv_check": {
+    "study": "s240",
+    "region": "UPMC_c001_v001_r001_reg039",
+    "source_folder": "three_dataset_demo/s240/UPMC_c001_v001_r001_reg039",
+    "cells": 1670,
+    "marker_columns": 41,
+    "annotation_categories": 14,
+    "complete_local_region": true,
+    "cell_ids_unique_and_order_match_all_tables": true,
+    "all_exported_values_match_local_source_as_strings": true,
+    "intensities_finite_and_nonnegative": true,
+    "coordinates_finite": true,
+    "annotation_version": "95-5-4",
+    "annotation_version_table": "data_process/study_celltype_final.tsv",
+    "annotation_version_table_sha256": "ad22560d0c41495292ad3ad1c2f2fb1a7441ec52499b7992e831510948b6d417",
+    "in_train_regions": true,
+    "in_validation_regions": false,
+    "split_unit": "patient",
+    "split_seed": 42,
+    "split_file": "training_contrastive_patient_300/train_test_split.json",
+    "split_file_sha256": "94f8d0bf9c4cf8a4aea81ad58a83d2ef89adc55562f417eb8f89203b4fc6056b",
+    "limitation": "Verified against the supplied local tables and recorded split, not against acquisition-level raw images or an independent public data deposit. Physical coordinate calibration and redistribution license are not established by these CSVs."
+  }
+}

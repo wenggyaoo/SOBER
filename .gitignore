@@ -1,0 +1,15 @@
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+.DS_Store
+checkpoints/
+logs/
+wandb/
+/data/
+*.pth
+*.pt
+*.pkl
+*.pickle
+*.log
+.ipynb_checkpoints/

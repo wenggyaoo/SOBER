@@ -1,0 +1,3 @@
+# Install only if using W&B logging or ESM protein embeddings.
+wandb>=0.16,<1
+fair-esm==2.0.0

@@ -1,0 +1,264 @@
+﻿Original_name,Coarse_cell_type,Granular_cell_type
+APC,NA,NA
+APC_T_cell,NA,NA
+Activated CD8,T cells,CD8 T cells
+Activated HLA-DR+ Macrophages,Macrophages,M1 Macrophages
+Artifact,NA,NA
+B cell,B cells,B cells
+B cells,B cells,B cells
+B cells type 1,B cells,B cells
+B cells type 2,B cells,B cells
+B cells type 3,B cells,B cells
+B cells type 8,B cells,B cells
+B cells type m,B cells,B cells
+BDCA3+_cell,Dendritic cells,Dendritic cells
+B_cell,B cells,B cells
+Bcells,B cells,B cells
+CD117+ mast cells,Mast cells,Mast cells
+CD138+ECad+_Epithelial,Epithelial cells,
+CD14+ monocytes/MDSCs,Monocytes,Monocytes
+CD15+ granulocytes,Granulocytes,Neutrophils
+CD16+_Monocyte,Monocytes,Monocytes
+CD163+ CD74+ Macrophages,Macrophages,M2 Macrophages
+CD163+ HLA-DR+ Macrophages,Macrophages,M2 Macrophages
+CD163+ Mac,Macrophages,M2 Macrophages
+CD163+ Macrophages,Macrophages,M2 Macrophages
+CD163+_Macrophage,Macrophages,M2 Macrophages
+CD163- Mac,Macrophages,M1 Macrophages
+CD20+ B cells,B cells,B cells
+CD20+ CD79a B cells,B cells,B cells
+CD208+ DCs,Dendritic cells,Dendritic cells
+CD3 PD1,T cells,
+CD31+ endothelial cells,Endothelial cells,Endothelial cells
+CD34+ endothelial cells,Endothelial cells,Endothelial cells
+CD38+ plasma cells,Plasma cells,Plasma cells
+CD3e+ T cells,T cells,
+CD4 T cell,T cells,CD4 T cells
+CD4 T cell PD1 High,T cells,CD4 T cells
+CD4 T cells,T cells,CD4 T cells
+CD4+ CD11c+ T cells,T cells,CD4 T cells
+CD4+ FoxP3+ T-regulatory cells,T cells,CD4 T cells
+CD4+ T cells,T cells,CD4 T cells
+CD4+CD8+T_cell,T cells,CD4 T cells
+CD4+T_cell,T cells,CD4 T cells
+CD66+ neutrophils,Granulocytes,Neutrophils
+CD68,Macrophages,M1 Macrophages
+CD68+ macrophages,Macrophages,M1 Macrophages
+CD74+ HLA-DR+ Macrophages,Macrophages,M1 Macrophages
+CD74+ Macrophages,Macrophages,M1 Macrophages
+CD8,T cells,CD8 T cells
+CD8 PD1,T cells,CD8 T cells
+CD8 T cell,T cells,CD8 T cells
+CD8 T cell PD1 High,T cells,CD8 T cells
+CD8 T cells,T cells,CD8 T cells
+CD8 T cells 2,T cells,CD8 T cells
+CD8+ GranzymeB+ T cells,T cells,CD8 T cells
+CD8+ T cells,T cells,CD8 T cells
+CD8+ TIM3+ T cells,T cells,CD8 T cells
+CD8+PD1+,T cells,CD8 T cells
+CD8T_1,T cells,CD8 T cells
+CD8T_10,T cells,CD8 T cells
+CD8T_11,T cells,CD8 T cells
+CD8T_12,T cells,CD8 T cells
+CD8T_13,T cells,CD8 T cells
+CD8T_14,T cells,CD8 T cells
+CD8T_15,T cells,CD8 T cells
+CD8T_16,T cells,CD8 T cells
+CD8T_17,T cells,CD8 T cells
+CD8T_18,T cells,CD8 T cells
+CD8T_2,T cells,CD8 T cells
+CD8T_3,T cells,CD8 T cells
+CD8T_5,T cells,CD8 T cells
+CD8T_7,T cells,CD8 T cells
+CD8T_8,T cells,CD8 T cells
+CD8T_9,T cells,CD8 T cells
+CDT_4,T cells,CD4 T cells
+Cancer Cells,Epithelial cells,Tumor cells
+Cluster 0,NA,NA
+Cluster 1,NA,NA
+Cluster 10,NA,NA
+Cluster 11,NA,NA
+Cluster 12,NA,NA
+Cluster 13,NA,NA
+Cluster 14,NA,NA
+Cluster 15,NA,NA
+Cluster 16,NA,NA
+Cluster 17,NA,NA
+Cluster 18,NA,NA
+Cluster 19,NA,NA
+Cluster 2,NA,NA
+Cluster 20,NA,NA
+Cluster 21,NA,NA
+Cluster 22,NA,NA
+Cluster 23,NA,NA
+Cluster 24,NA,NA
+Cluster 25,NA,NA
+Cluster 26,NA,NA
+Cluster 27,NA,NA
+Cluster 28,NA,NA
+Cluster 29,NA,NA
+Cluster 3,NA,NA
+Cluster 30,NA,NA
+Cluster 31,NA,NA
+Cluster 32,NA,NA
+Cluster 33,NA,NA
+Cluster 34,NA,NA
+Cluster 4,NA,NA
+Cluster 5,NA,NA
+Cluster 6,NA,NA
+Cluster 7,NA,NA
+Cluster 8,NA,NA
+Cluster 9,NA,NA
+Cytotoxic T cells,T cells,CD8 T cells
+DC (CD11c+),Dendritic cells,Dendritic cells
+Dendritic cell,Dendritic cells,Dendritic cells
+Dendritic cells,Dendritic cells,Dendritic cells
+ECad+ Vimentin+ cells,Epithelial cells,
+ECad+_Epithelial,Epithelial cells,
+Endothelial,Endothelial cells,Endothelial cells
+Endothelial cell,Endothelial cells,Endothelial cells
+Endothelial cells,Endothelial cells,Endothelial cells
+Eosinophil (Siglec8+),Granulocytes,Eosinophils
+EpCAM+ tumor cells,Epithelial cells,Tumor cells
+Epithelial,Epithelial cells,
+Epithelial cells,Epithelial cells,Tumor cells
+Epithelial-/tumor cells,NA,NA
+FDC_B_cell,B cells,B cells
+Failed QC,NA,NA
+Fibroblast,Stromal cells,Fibroblasts
+Fibroblasts,Stromal cells,Fibroblasts
+FoxP3+ CD4+ Tregs,T cells,Tregs
+FoxP3+ T cells,T cells,Tregs
+Granulocyte,Granulocytes,
+Granulocytes,Granulocytes,
+Helper T cells,T cells,CD4 T cells
+ICs,NA,NA
+INFg+,NA,NA
+Immune,NA,NA
+Immune cells,NA,NA
+Keratin+_Epithelial,Epithelial cells,Tumor cells
+Lymphatic Endothelial cells,Endothelial cells,Endothelial cells
+Lymphatics,Endothelial cells,Endothelial cells
+M2 (CD163+ CD68+),Macrophages,M2 Macrophages
+MDSC (CD14+),Monocytes,Monocytes
+MPO+ CD68+ macrophages,Macrophages,M1 Macrophages
+MPO+ neutrophils,Granulocytes,Neutrophils
+Mac (CD68+),Macrophages,M1 Macrophages
+Macrophage,Macrophages,M1 Macrophages
+Macrophage PDL1 High,Macrophages,M1 Macrophages
+Macrophages,Macrophages,M1 Macrophages
+Macrophages M2-like,Macrophages,M2 Macrophages
+Macrophages T cells,Macrophages,M1 Macrophages
+Macrophages type 2,Macrophages,M2 Macrophages
+Mast (CD117+),Mast cells,Mast cells
+Mast Cells,Mast cells,Mast cells
+Mast cell,Mast cells,Mast cells
+Mast cells,Mast cells,Mast cells
+Melanoma cells,Epithelial cells,Tumor cells
+Mixed,NA,NA
+Monocyte (HLA-DR+ CD14+),Monocytes,Monocytes
+Monocyte cells,Monocytes,Monocytes
+Monocytes,Monocytes,Monocytes
+Myeloid cells,NA,NA
+Myoepithelial,Epithelial cells,
+NK (CD56+),NK cells,NK cells
+NK cells,NK cells,NK cells
+NKT (CD3+CD56+),T cells,
+NK_cell,NK cells,NK cells
+NKcells,NK cells,NK cells
+Neutrophil,Granulocytes,Neutrophils
+Neutrophil (CD15+),Granulocytes,Neutrophils
+Neutrophils,Granulocytes,Neutrophils
+Nonspecific,NA,NA
+Other,NA,NA
+Others,NA,NA
+PD1,NA,NA
+PanCK+ EpCAM+ ECad+ tumor cells,Epithelial cells,Tumor cells
+PanCK+ EpCAM+ Keratin+ cells,Epithelial cells,
+PanCK+ EpCAM+ Keratin- tumor cells,Epithelial cells,Tumor cells
+PanCK+ EpCAM+ Keratin-lo cells,Epithelial cells,
+PanCK+ EpCAM+ tumor cells,Epithelial cells,Tumor cells
+PanCK+ EpCAM- Keratin+ cells,Epithelial cells,
+PanCK+ Tumor cells,Epithelial cells,Tumor cells
+PanCK+ Tumor_immune_mixed,Epithelial cells,Tumor cells
+PanCK+ Tumor_mixed,Epithelial cells,Tumor cells
+PanCK+ tumor cells,Epithelial cells,Tumor cells
+PanCK- EpCAM+ Keratin- tumor cells,Epithelial cells,Tumor cells
+PanCK- EpCAM+ Keratin-lo cells,Epithelial cells,
+PanCk PDL1,Epithelial cells,
+Plasma cells,Plasma cells,Plasma cells
+Plasma_cell,Plasma cells,Plasma cells
+Podoplanin+ glomerular cells,NA,NA
+Podoplanin+ lymphatic vessels,Endothelial cells,Endothelial cells
+Podoplanin+ stromal cells,Stromal cells,
+Proliferating CD4+ FOXP3+ Treg cells,T cells,Tregs
+Proliferating CD4+ T cells,T cells,CD4 T cells
+Proliferating CD8+ GranzymeB+ T cells,T cells,CD8 T cells
+Proliferating CD8+ T cells,T cells,CD8 T cells
+Proliferating CD8+ TIM3+ T cells,T cells,CD8 T cells
+Proliferating T cells,T cells,
+Stroma,Stromal cells,
+Stroma Uncharacterized,NA,NA
+Stromal cells,Stromal cells,
+T cell,T cells,
+T cell subset 1 (CD4),T cells,CD4 T cells
+T cell subset 2 (CD4),T cells,CD4 T cells
+T cells,T cells,
+TCs,T cells,
+Teff,T cells,
+Teff (CD8+),T cells,CD8 T cells
+Th,T cells,CD4 T cells
+Th (CD4+),T cells,CD4 T cells
+Treg,T cells,Tregs
+Treg (FoxP3+),T cells,Tregs
+Tregs,T cells,Tregs
+Tumor,Epithelial cells,Tumor cells
+Tumor Inos,Epithelial cells,Tumor cells
+Tumor cell,Epithelial cells,Tumor cells
+Tumor cells,Epithelial cells,Tumor cells
+Tumor cells 2,Epithelial cells,Tumor cells
+Tumor cells 3,Epithelial cells,Tumor cells
+Tumor cells 4,Epithelial cells,Tumor cells
+Tumor/ immune cells,Epithelial cells,Tumor cells
+Unknown,NA,NA
+Unknown cell,NA,NA
+Vimentin+ stromal cells,Stromal cells,Fibroblasts
+aSMA+ Stromal cells,Stromal cells,
+aSMA+ blood vessel cells,Stromal cells,Perivascular Cells
+aSMA+ muscle cells,Stromal cells,
+aSMA+ smooth muscle cells,Stromal cells,
+aSMA+ stromal cells,Stromal cells,
+artifact,NA,NA
+dPVL,Stromal cells,Perivascular Cells
+dPVL_1,Stromal cells,Perivascular Cells
+dPVL_2,Stromal cells,Perivascular Cells
+iCAF,Stromal cells,Fibroblasts
+imPVL,Stromal cells,Perivascular Cells
+imPVL_1,Stromal cells,Perivascular Cells
+low expression cells,NA,NA
+myCAF,Stromal cells,Fibroblasts
+other (Vimentin-),NA,NA
+other cells,NA,NA
+other cells (nonspecific),NA,NA
+other immune,NA,NA
+stromal (Vimentin+),Stromal cells,Fibroblasts
+tumor (PanCK+),Epithelial cells,Tumor cells
+vessels (CD31+),Endothelial cells,Endothelial cells
+PD-L1- tumor,Epithelial cells,Tumor cells
+PD-L1+ tumor,Epithelial cells,Tumor cells
+PD-1- CD8+,T cells,CD8 T cells
+PD-1+ CD8+,T cells,CD8 T cells
+FOXP3+,T cells,Tregs
+Tumour,Epithelial cells,Tumor cells
+M2_mac,Macrophages,M2 Macrophages
+Vessels,Endothelial cells,Endothelial cells
+CD4,T cells,CD4 T cells
+M1_mac,Macrophages,M1 Macrophages
+Ki67,NA,NA
+B_Cells,B cells,B cells
+CD8_cells,T cells,CD8 T cells
+DCs,Dendritic cells,Dendritic cells
+Cytotoxic CD8,T cells,CD8 T cells
+CD4_TFH,T cells,CD4 T cells
+Exhausted CD8,T cells,CD8 T cells
+Unidentified,NA,NA

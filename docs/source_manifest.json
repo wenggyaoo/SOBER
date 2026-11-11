@@ -1,0 +1,20 @@
+{
+  "description": "SHA-256 of local source files at training-release extraction; no original files modified.",
+  "source_files": {
+    "model.py": "eda7604d2266d99c0c70f50b8cd86474beadbfa3f3975a2c8a424710ca4d98d3",
+    "train.py": "bf33145e373ad9e054bf3c5429d764e1a97aa6eec62428c57b4b6514dc9297d5",
+    "spatial_sampler.py": "792c1ad34db249e260734d343bedc4e3f650969c316bb1237358f11ae3c6e7eb",
+    "intensity_masker.py": "53999bea3a6837e41dedc20ff0420c97e10b9d49d8c14c61e093b29df6909e2e",
+    "positional_embedding.py": "633b1b7baeaf747f538eddaeb04e37a329043381372c705331949ba3eec044a3",
+    "esm_embedder.py": "facd693f023973337a1f19c3fea37a530ca6aed27385dce05f559c4f725053b4",
+    "cell_type_normalize.py": "09a3e32093eb2c44606603d6e5eb7677a0b10d658fddb189a756ceb87b067dce",
+    "biomarker_name_mapping.json": "9de6ec445175a8dc25f44d17cd482acf102fd96daca87b7a88d97216dde31cf6",
+    "biomarker_sequences.csv": "454e14b91e8d4a8d8651071ffcabe46ed9530e1af6958e097bc3268d4d360cc1",
+    "data_process/cell_type_mappings.csv": "25611489579e60c7cd6f8a61bfc2aca9ffa34f27945f176cd9a8bfa2289d8807",
+    "data_process/study_celltype_final.tsv": "ad22560d0c41495292ad3ad1c2f2fb1a7441ec52499b7992e831510948b6d417",
+    "config.py": "1a3a4c14f04739d9a6b374fd199d15e9fd1ccadc3b37131c7f82139adce0f2a6",
+    "data_loader.py": "ff6510b1194625a84eb37c01821844cdf8fafc78f73e1d562c42ab14e8383aec",
+    "downstream_split.py": "936699a8ff8cd28bb9761c68668e9381ac7c256acac99a7a096f2ff41b3299c9",
+    "demo_run.py": "3f952aeccb9fe3b4eaf79ea355197d3c5de66be966bda07dffab84b2ed35770e"
+  }
+}

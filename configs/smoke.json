@@ -1,0 +1,20 @@
+{
+  "enable_triplet_loss": false,
+  "use_cell_types": false,
+  "reconstruction_loss_weight": 0.8,
+  "distillation_loss_weight": 0.2,
+  "distillation_mode": "center_mse",
+  "d_model": 32,
+  "nhead": 4,
+  "num_encoder_layers": 1,
+  "dim_feedforward": 64,
+  "learnable_embedding_dim": 32,
+  "use_triplet_projection_head": false,
+  "batch_size": 4,
+  "num_epochs": 1,
+  "n_subgraphs_per_region": 4,
+  "max_neighbors": 4,
+  "min_cells_per_region": 8,
+  "neighborhood_summary_max_centers_per_region": 8,
+  "warmup_steps": 0
+}

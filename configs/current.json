@@ -1,0 +1,9 @@
+{
+  "enable_triplet_loss": true,
+  "reconstruction_loss_weight": 1.0,
+  "distillation_loss_weight": 0.0,
+  "distillation_mode": "byol",
+  "contrastive_loss": "infonce",
+  "triplet_coarse_weight": 0.2,
+  "triplet_granular_weight": 0.0
+}

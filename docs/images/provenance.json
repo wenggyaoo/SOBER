@@ -1,0 +1,26 @@
+{
+  "source_file": "Fig1_AB_linked.ai",
+  "source_sha256": "6c96b9fc9a97d56b5adf5c22c5f0acaecddf8f250d47a12496cc394807298f49",
+  "rendering": "PDF-compatible Illustrator source rendered with Poppler at 360 dpi; original artwork and data retained.",
+  "exports": [
+    {
+      "file": "dataset_overview.png",
+      "crop_pixels_at_360_dpi": {
+        "x": 180,
+        "y": 260,
+        "width": 2630,
+        "height": 885
+      }
+    },
+    {
+      "file": "model_overview.png",
+      "crop_pixels_at_360_dpi": {
+        "x": 180,
+        "y": 1265,
+        "width": 2630,
+        "height": 950
+      }
+    }
+  ],
+  "layout_note": "Crops omit the source section letters and old model heading; section titles and captions are supplied in the main README."
+}

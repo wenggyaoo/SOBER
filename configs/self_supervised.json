@@ -1,0 +1,7 @@
+{
+  "enable_triplet_loss": false,
+  "use_cell_types": false,
+  "reconstruction_loss_weight": 0.8,
+  "distillation_loss_weight": 0.2,
+  "distillation_mode": "center_mse"
+}

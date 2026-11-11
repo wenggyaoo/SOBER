@@ -1,0 +1,10 @@
+{
+  "enable_triplet_loss": true,
+  "reconstruction_loss_weight": 0.7,
+  "distillation_loss_weight": 0.1,
+  "distillation_mode": "center_mse",
+  "contrastive_loss": "triplet",
+  "triplet_coarse_weight": 0.1,
+  "triplet_granular_weight": 0.1,
+  "neighbor_distance_threshold": 150
+}

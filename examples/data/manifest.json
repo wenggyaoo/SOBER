@@ -1,0 +1,139 @@
+{
+  "description": "Three complete regions for the SOBER data-loading tutorial: two external IMC examples and one internal CODEX training example.",
+  "selection": "External: the complete region closest to 1500 cells in each collection, with ties broken by region name. Internal: a small complete s240 region present in the saved training partition. No cells are sampled or cropped.",
+  "preparation": "Standardize headers and omit redundant numeric label codes. Preserve all supplied cell IDs, expression values, coordinates, and annotation strings. See each example and README.md for source-specific processing and coordinate units.",
+  "examples": [
+    {
+      "study": "damond2019map",
+      "region": "N43",
+      "label": "Damond 2019 pancreas",
+      "cells": 1500,
+      "raw_markers": 35,
+      "author_label_categories": 14,
+      "data_doi": "10.5281/zenodo.20623726",
+      "paper_doi": "10.1016/j.cmet.2018.11.014",
+      "license": "CC-BY-4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_file": "sce_full.rds",
+      "source_md5": "cc2eebdfc3792aa08f9042d1006cdc7d",
+      "source_assay": "counts",
+      "microns_per_model_unit": 0.5,
+      "coordinate_scale_from_source": 2,
+      "folder": "damond2019map/N43",
+      "files": {
+        "cell_data.csv": {
+          "sha256": "d4960ad8c7b30d21dfafe5f30f2511f2ce2e183b3e1d20b75c2979557236b757",
+          "source_csv_sha256": "53c0ab2d1e93aede495d1ffed98161f9dd296e96e7ffd3cfcc300a3d7b8950c0",
+          "rows": 1500
+        },
+        "expression.csv": {
+          "sha256": "d73c69aad55b96b84592cc42a52722a27894f041ed188056db35a77cdb8c85b0",
+          "source_csv_sha256": "d492866f38f11415c8ae2239db56e2c60b1f5d13d2a85bca73fa5a419a93bfb2",
+          "rows": 1500
+        },
+        "cell_type.csv": {
+          "sha256": "bb2a871ebc1c7c167ea273b01a02a18f763789f2cb5b02454a7012ffcef1664c",
+          "source_csv_sha256": "146a2836b06a8cef1068e4b306aa5fb35d847430b37bd99377eb79a5586f7fad",
+          "rows": 1500
+        }
+      },
+      "source_creators": [
+        "Steenbuck, Nathan",
+        "Damond, Nicolas"
+      ],
+      "coordinate_scale_evidence": "Damond paper reports approximately 1 micrometre acquisition resolution; source cell_x/cell_y originate from CellProfiler pixel centroids.",
+      "scope": "External",
+      "platform": "IMC",
+      "split_membership": "Absent from the recorded training and internal-validation region lists."
+    },
+    {
+      "study": "meyer2025stratification",
+      "region": "ZTMA249.1_ZTMA249_ID_48_AX8Y6_30",
+      "label": "Meyer 2025 breast cancer",
+      "cells": 1500,
+      "raw_markers": 36,
+      "author_label_categories": 14,
+      "data_doi": "10.5281/zenodo.20541924",
+      "paper_doi": "10.1016/j.ccell.2025.06.019",
+      "license": "CC-BY-4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "source_file": "sce_full.rds",
+      "source_md5": "cb99532b227c4a1db2b885034987e1f3",
+      "source_assay": "counts",
+      "microns_per_model_unit": 0.5,
+      "coordinate_scale_from_source": 2,
+      "folder": "meyer2025stratification/ZTMA249.1_ZTMA249_ID_48_AX8Y6_30",
+      "files": {
+        "cell_data.csv": {
+          "sha256": "cd9b490dc695105282fbd0baa7d96db510e5802b4749ea43e30f5c759db1a33f",
+          "source_csv_sha256": "c1676d7ef86a3a6efdf9d7e210d5ef4b0d55c4552e381c70a7f0a7dc84afc240",
+          "rows": 1500
+        },
+        "expression.csv": {
+          "sha256": "5d2f7124679413c6fda3841cf7b874b7ab2cb506449d16ef836e98e0ea01fe9b",
+          "source_csv_sha256": "473eeb8146b5b35233bf2a3f485a3c41fd4445902a4ba542c7c717445c4d554b",
+          "rows": 1500
+        },
+        "cell_type.csv": {
+          "sha256": "b7a24a6bc4d920c35db5c02f7df1ddb28cd05ae112b04adf088de28ca53a3a0a",
+          "source_csv_sha256": "5816c6e7fa88d92c569282033716126f8250e2799f592141a28cdbe40373f08e",
+          "rows": 1500
+        }
+      },
+      "source_creators": [
+        "Steenbuck, Nathan",
+        "Meyer, Lasse"
+      ],
+      "coordinate_scale_evidence": "Uses the existing local conversion setting of 1 micrometre per native coordinate unit; acquisition-level physical calibration not independently verified.",
+      "scope": "External",
+      "platform": "IMC",
+      "split_membership": "Absent from the recorded training and internal-validation region lists."
+    },
+    {
+      "study": "s240",
+      "region": "UPMC_c001_v001_r001_reg039",
+      "label": "UPMC-HNC (s240)",
+      "scope": "Internal training",
+      "platform": "PhenoCycler (CODEX)",
+      "cells": 1670,
+      "raw_markers": 41,
+      "author_label_categories": 14,
+      "source_folder": "three_dataset_demo/s240/UPMC_c001_v001_r001_reg039",
+      "paper_doi": "10.1038/s41551-022-00951-w",
+      "license": "Not specified in the supplied local CSVs; external-example CC-BY-4.0 licenses do not apply.",
+      "source_annotation_version": "95-5-4",
+      "source_annotation_file": "UPMC_c001_v001_r001_reg039.cell_types.95-5-4.csv",
+      "preparation": "Copy supplied expression values and native coordinates unchanged; rename headers and export ANNOTATION_LABEL from the training-selected 95-5-4 file. No additional normalization, channel removal, or coordinate scaling.",
+      "microns_per_model_unit": null,
+      "coordinate_scale_from_source": 1,
+      "coordinate_scale_evidence": "Native coordinates retained. Physical calibration has not been verified for this local export; the tutorial plots source units.",
+      "split_membership": "train_regions; absent from validation_regions in the saved patient split.",
+      "split_file": "training_contrastive_patient_300/train_test_split.json",
+      "split_file_sha256": "94f8d0bf9c4cf8a4aea81ad58a83d2ef89adc55562f417eb8f89203b4fc6056b",
+      "split_unit": "patient",
+      "split_seed": 42,
+      "folder": "s240/UPMC_c001_v001_r001_reg039",
+      "files": {
+        "cell_data.csv": {
+          "sha256": "eaca5f868e9663285ed17a04eecb2565b6f91bc1a37b6edfeadead9ed80b6e60",
+          "source_csv": "cell_data.csv",
+          "source_csv_sha256": "2f14f9ba56ea9dc3775dc365aa5e48ae39e67f2892a10c28118ef0e2f54db433",
+          "rows": 1670
+        },
+        "expression.csv": {
+          "sha256": "11692c4dadb0a600be8e3d9114805740aab11a63fb9f2574996b8bc2aae02da2",
+          "source_csv": "expression.csv",
+          "source_csv_sha256": "568c2e40d600e11ff1264566de6df587ee4e1ebf80565903ae83c9e0069912fe",
+          "rows": 1670
+        },
+        "cell_type.csv": {
+          "sha256": "093e6892756609bb8ed2dfdaa30aab50be265c6093818ff21575b775df76ab37",
+          "source_csv": "UPMC_c001_v001_r001_reg039.cell_types.95-5-4.csv",
+          "source_csv_sha256": "bf77d5e6db9106389f2bc3adfef77e91fba9ccf8805c883fd62fe581225dc302",
+          "rows": 1670
+        }
+      }
+    }
+  ],
+  "verification_file": "verification.json"
+}
