@@ -10,7 +10,7 @@ The development atlas contains **222.1 million cells across 25 source collection
 
 ![SOBER model architecture](docs/images/model_overview.png)
 
-Default training in this release combines **masked protein reconstruction (1.0)** and **study-aware coarse cell-type InfoNCE (0.2)**. Exponential-moving-average (EMA) teacher–student distillation is optional. Downstream evaluation code is outside this release.
+Training combines **masked protein reconstruction (0.7)**, **EMA teacher–student distillation with a BYOL objective (0.1)**, and **study-aware coarse cell-type InfoNCE (0.2)**, matching the epoch-10 pretrained model. Downstream evaluation code is outside this release.
 
 ## Installation
 
@@ -21,6 +21,16 @@ python -m pip install -r requirements.txt
 ```
 
 The [data loading tutorial](tutorials/data_loading.ipynb) covers real tables, normalization, and spatial neighborhoods using one internal training region (UPMC-HNC) and two external regions (Damond and Meyer). See [example data](examples/data/README.md) for their sources and split membership.
+
+## Pretrained model
+
+The [epoch-10 checkpoint](https://github.com/wenggyaoo/SOBER/releases/tag/v0.1.0) includes student and EMA teacher weights, configuration, and the 41-marker vocabulary. Download and verify it with:
+
+```bash
+python scripts/download_checkpoint.py
+```
+
+The [inference tutorial](tutorials/inference.ipynb) extracts cell embeddings and reconstructs masked markers from the included UPMC-HNC region. Model provenance and checksums are recorded in [the model manifest](models/epoch10.json).
 
 ## Input data
 

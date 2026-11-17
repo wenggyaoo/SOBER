@@ -1,0 +1,69 @@
+{
+  "model": "SOBER",
+  "version": "v0.1.0",
+  "epoch": 10,
+  "global_step": 615780,
+  "file": "sober_epoch10.pth",
+  "url": "https://github.com/wenggyaoo/SOBER/releases/download/v0.1.0/sober_epoch10.pth",
+  "sha256": "97367e6a2580c9f60d44cc7919e050424f62da93e9d2b3407e13f99cb9d2bd80",
+  "bytes": 325632594,
+  "contents": "Unmodified student and EMA teacher weights, model configuration, marker vocabulary and mapping assets; optimizer state omitted.",
+  "training_objectives": {
+    "masked_reconstruction": 0.7,
+    "byol_distillation": 0.1,
+    "coarse_infonce": 0.2
+  },
+  "training_split": {
+    "unit": "patient",
+    "seed": 42,
+    "train_ratio": 0.8,
+    "training_patients": 7352,
+    "validation_patients": 1838,
+    "training_regions": 15764,
+    "validation_regions": 4008
+  },
+  "provenance": {
+    "source_checkpoint_sha256": "ef82bcf30f3f025e23ea4a3410ea4aabaaac596264be694ea271a2549dd0b594",
+    "training_log_sha256": "7e710836b2fa5fab6d39e4b4b68c6373c48466c4720d849d9dd89eaa6bd7100d",
+    "training_split_sha256": "94f8d0bf9c4cf8a4aea81ad58a83d2ef89adc55562f417eb8f89203b4fc6056b",
+    "training_history_sha256": "380df91da2ab85d3218d95946f7261792070aae9f5ad85af3be43378f2571753"
+  },
+  "validation": {
+    "torch": "2.6.0",
+    "device": "cpu",
+    "reference": "Research implementation loaded with the original checkpoint",
+    "example": "s240/UPMC_c001_v001_r001_reg039",
+    "center_indices": [
+      0,
+      17,
+      540
+    ],
+    "weight_tensors_equal": true,
+    "outputs": {
+      "unmasked": {
+        "max_absolute_difference": 0.0,
+        "checked_outputs": [
+          "center_encoded",
+          "token_encoded",
+          "distill_projection",
+          "distill_prediction"
+        ]
+      },
+      "masked": {
+        "max_absolute_difference": 0.0,
+        "checked_outputs": [
+          "center_encoded",
+          "token_encoded",
+          "distill_projection",
+          "distill_prediction",
+          "recon_results",
+          "recon_target"
+        ]
+      }
+    },
+    "python": "3.12.7",
+    "platform": "macOS-15.3.2-arm64-arm-64bit",
+    "inference_notebook": "Executed all cells on CPU; 16 cell embeddings (512 dimensions) and 512 masked marker predictions.",
+    "training_smoke_test": "One optimizer step on a reduced-width model using real example regions; reconstruction, BYOL and coarse InfoNCE losses were positive and finite, and the EMA teacher was active."
+  }
+}

@@ -29,8 +29,8 @@ class Config:
     weight_decay = 0
     warmup_steps = 1000
     ema_momentum = 0.999
-    reconstruction_loss_weight = 1
-    distillation_loss_weight = 0
+    reconstruction_loss_weight = 0.7
+    distillation_loss_weight = 0.1
     enable_triplet_loss = True
     distillation_mode = 'byol'
     distillation_projection_dim = 256
