@@ -1,0 +1,120 @@
+{
+  "format_version": 1,
+  "scope": "Small examples using cached token-mean embeddings and saved post-transplant state assignments. No raw Wang/Meyer neighborhoods or counterfactual clinical outcomes are included.",
+  "transfer": {
+    "selection": "First two patient IDs in lexical order per cohort; retain every cached neighborhood for each. No prediction-based selection.",
+    "cohorts": {
+      "Wang": {
+        "patients": [
+          "NT001",
+          "NT002"
+        ],
+        "n_neighborhoods": 1200
+      },
+      "Meyer": {
+        "patients": [
+          "B05.14713",
+          "B05.34236"
+        ],
+        "n_neighborhoods": 800
+      }
+    },
+    "embedding": "token_mean",
+    "atlas_states": 15,
+    "saved_state_agreement": "All selected assignments exactly match source tables.",
+    "preprocessing": "Cached Wang embeddings use the source pipeline; cached Meyer embeddings use the recorded positive-quantile alignment to the Wang reference. No alignment is refitted in the tutorial."
+  },
+  "clinical": {
+    "selection": "First three patient IDs in lexical order from saved C&I fold 1, repeat 0. All saved edit locations and all three donor conditions are retained.",
+    "patients": [
+      "NT003",
+      "NT087",
+      "NT089"
+    ],
+    "head": "StandardScaler + balanced logistic regression; C=1, max_iter=3000, seed=1; StratifiedKFold(3, shuffle=True, random_state=1).",
+    "head_origin": "Reconstructed from the saved full patient-abundance table using the research classifier and split definitions; not an original serialized head. Predictions checked against saved logits.",
+    "feature_order": [
+      "cluster_0",
+      "cluster_1",
+      "cluster_2",
+      "cluster_3",
+      "cluster_4",
+      "cluster_5",
+      "cluster_6",
+      "cluster_7",
+      "cluster_8",
+      "cluster_9",
+      "cluster_10",
+      "cluster_11",
+      "cluster_12",
+      "cluster_13",
+      "cluster_14"
+    ],
+    "fold_original_checks": [
+      {
+        "fold": 1,
+        "max_original_logit_error": 5.104557323498682e-07
+      },
+      {
+        "fold": 2,
+        "max_original_logit_error": 7.007980595830077e-07
+      },
+      {
+        "fold": 3,
+        "max_original_logit_error": 1.423632839780975e-06
+      }
+    ],
+    "max_saved_perturbed_logit_error": 4.338263224212824e-07,
+    "predictor_scope": "Frozen Wang atlas was built from the source cohort without response labels; the logistic readout excludes the selected patients. This is not a wholly fold-local atlas benchmark.",
+    "claim": "Changes in a model score under saved neighborhood substitutions, not observed treatment benefit or causal clinical effects."
+  },
+  "source_files": {
+    "wang_to_meyer_check/frozen_wang_state_model.npz": "9b2e148b90d78bc20caf85fc07047bb0820ff716abc9ec9ee633ab7a410dc0dc",
+    "source_wang/wang_neighborhood_assignments.csv": "598793712b14e380577b13ab49edeeb27ca1be701dfffd9deb121dba8f8ba0e4",
+    "source_wang/wang_neighborhood_embeddings.npz": "6b0784f80040c89485a68b4dc3658a894a79325de0f2e99821b2a06d59a3a1d0",
+    "target_meyer/meyer_transferred_neighborhood_assignments.csv": "96a6f5c36692302c735f2626446df9e9bb42b71c9a22da69d382a9046dde24ad",
+    "target_meyer/meyer_transferred_neighborhood_embeddings.npz": "fcb77e0bc33bb631ce45532272ee4a370d949d8768e1ed35a3145c815bec6cc7",
+    "wang_C_vs_CI_token_mean/wang_therapy_patient_state_abundance.csv": "d3b719828eabb14dc2c7f3b0c355eec3e94bc0b4da51b66eabb5cfaf647a970f",
+    "wang_C_vs_CI_token_mean/therapy_neighborhood_transplant_effects.csv": "d1b6f0409b520f6be8d4967c669353917a3ad9203884d7009056c9fa49819932",
+    "wang_C_vs_CI_token_mean/therapy_neighborhood_transplant_state_transitions.csv": "cf41573d640915d4d41930455f5a258c9a8e5fb7c55e7d3a6f9dfce5509a4e6a",
+    "wang_C_vs_CI_token_mean/wang_therapy_state_assignments.csv": "1945236e235117c0ef029ae2e8b075e394baffb14230dba3f342728527031f61",
+    "wang_C_vs_CI_token_mean/wang_therapy_neighborhood_metadata.csv": "a68f1f36d2a4bddbe323ef5b9067c9a33070155acfbbcf9357adae60262a1c1e"
+  },
+  "source_code": {
+    "downstream_context_sensitivity.py": "bea2bd1d9db1003d167f4ae08bdfc3b35cab65466b16221dd50f688f780390e4",
+    "downstream_perturbation.py": "e895d5f1973e25caf263e3da781673b314e978f11c7286acb3fb14a4747e3bdd",
+    "neighborhood_context.py": "24f35d77e68790fe43fa3f1b5aea14d3add46fde6505e36545c62486e1f5c66e",
+    "downstream_TME_transfer.py": "4c47cd1856224626a976c75c5b1b43970e8797aa18a6988620776c835441f44a",
+    "downstream_therapy.py": "bb0524a659ec1f02c32742a7f43e8b8556a73328ea08c5fb9be092c6d92f96e5"
+  },
+  "files": {
+    "clinical_cases.csv": {
+      "sha256": "6516062be43285880b5912a290234b1e9430418f1a54be4be566d85e06d12e91",
+      "bytes": 329
+    },
+    "clinical_edits.csv": {
+      "sha256": "7a0e3a3ed66563ecb1097e5dd859f9954bc4a1f4bfe6dfcfec525361ae6d686c",
+      "bytes": 3418
+    },
+    "clinical_expected.csv": {
+      "sha256": "c44992ce39e0d639453648d656b8cc540e06eae50849327ca0a1481007a360c9",
+      "bytes": 567
+    },
+    "clinical_head.npz": {
+      "sha256": "96cd9bcabfd23c7274436cc8e0a8edd58aed232842f5520bc0ea0e33bbe997b7",
+      "bytes": 2412
+    },
+    "state_atlas.npz": {
+      "sha256": "a6d319a680897dc9f525c811a4120ce03bf05726f04b9459d81845e523885086",
+      "bytes": 126679
+    },
+    "transfer_embeddings.npz": {
+      "sha256": "cf59920ba9614b561d668eeabaf0373b38e71ea57067fa062f9497af1b61d778",
+      "bytes": 3788444
+    },
+    "transfer_metadata.csv": {
+      "sha256": "94fc7e154203b403417318c605beb9e873980a32fdfea8eeb8ed9b82ee1b62a6",
+      "bytes": 136062
+    }
+  }
+}

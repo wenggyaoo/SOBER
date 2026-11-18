@@ -38,5 +38,131 @@
     "external_protocol_difference": "Full external results additionally use training-reference expression alignment and panel-matched annotation references. The saved external neighbor-mean baseline uses 80% neighbor masking while SOBER uses 20-80%. These internal examples use shared masks and do not implement the full external evaluation.",
     "marker_policy": "Literal reconstruction exclusions are applied after alias resolution, matching the saved research analysis; no new canonicalization of exclusion names is introduced.",
     "tutorial_reference": "The annotation tutorial uses a class-balanced reference: 64 centers per coarse class from three recorded training regions. This demonstration sampling differs from the manuscript full-atlas reference; query stratification and KNN/metric definitions are unchanged."
+  },
+  "perturbation_tutorials": {
+    "extracted_on": "2026-11-18",
+    "source_files": {
+      "downstream_context_sensitivity.py": "bea2bd1d9db1003d167f4ae08bdfc3b35cab65466b16221dd50f688f780390e4",
+      "downstream_perturbation.py": "e895d5f1973e25caf263e3da781673b314e978f11c7286acb3fb14a4747e3bdd",
+      "neighborhood_context.py": "24f35d77e68790fe43fa3f1b5aea14d3add46fde6505e36545c62486e1f5c66e",
+      "downstream_TME_transfer.py": "4c47cd1856224626a976c75c5b1b43970e8797aa18a6988620776c835441f44a",
+      "downstream_therapy.py": "bb0524a659ec1f02c32742a7f43e8b8556a73328ea08c5fb9be092c6d92f96e5"
+    },
+    "public_modules": {
+      "sober/perturbation.py": "9dd1c0ed60c7bcf49fb856b8ff63614ada894a06d4f8a4482aec42ce10255f4b",
+      "sober/clinical.py": "47a016e97706a0d0e7dd118c1f3de472558b75e9a83ade26876e109c50069841"
+    },
+    "radius": {
+      "scope": "32 coarse T-cell centers in one complete internal-validation UPMC-HNC region; 128 additional sampled candidates; two non-overlapping recipient-donor pairs per center; epoch-10 student.",
+      "protocol": "Force all non-primer/non-DAPI center markers into a fixed mask; CD3e primer; leave neighbors visible. Match within study/panel; rank-based expression replacement outside nested boundaries preserves recipient geometry. Fisher-average across donor-slot correlations computed over centers.",
+      "coordinate_units": "\u00b5m for tutorial distances, plots and exports; two stored model coordinate units per \u00b5m, matching the original analysis and manuscript. Model input coordinates are unchanged.",
+      "differences_from_full_analysis": "Reduced candidate pool and donor count; single-region fallback; seven distance boundaries and two readouts. No full-cohort spatial decay fit.",
+      "parity": {
+        "donor_assignments": 64,
+        "exact_mask_matches": 32,
+        "exact_replacement_matches": 448,
+        "baseline_prediction_max_absolute_error": 0.0,
+        "radius_metric_max_absolute_error": 0.0,
+        "source_functions": {
+          "neighborhood_context.py": [
+            "sample_cell_type",
+            "_neighbor_group",
+            "composition_environment",
+            "build_center_masks"
+          ],
+          "downstream_context_sensitivity.py": [
+            "_safe_pearson",
+            "_fisher_mean_correlations",
+            "_neighbor_distances",
+            "_nanmax_or_nan",
+            "_sample_cell_ids",
+            "_neighborhoods_overlap",
+            "_composition_vector",
+            "_study_composition_means",
+            "_donor_match_score",
+            "_choose_donor_assignments",
+            "_cell_id_index",
+            "_build_radial_plan",
+            "_apply_radial_plan",
+            "_summarize_radial_rows"
+          ],
+          "downstream_perturbation.py": [
+            "build_fixed_center_masks",
+            "compute_recon_fixed_mask"
+          ]
+        },
+        "compatibility": "AST-loaded original functions without module side effects; np.trapz maps to np.trapezoid in the original summary for NumPy 2.x."
+      },
+      "unit_display_check": {
+        "model_units_per_um": 2.0,
+        "boundaries_um": [
+          150.0,
+          75.0,
+          50.0,
+          37.5,
+          25.0,
+          12.5,
+          0.0
+        ],
+        "predictions_unchanged": true,
+        "metrics_unchanged": true,
+        "donors_unchanged": true,
+        "data_loading_rerun": {
+          "status": "passed",
+          "elapsed_seconds": 8.77,
+          "code_cells": 9
+        }
+      }
+    },
+    "clinical": {
+      "scope": "Small examples using cached token-mean embeddings and saved post-transplant state assignments. No raw Wang/Meyer neighborhoods or counterfactual clinical outcomes are included.",
+      "transfer_state_assignments_checked": 2000,
+      "transfer_state_agreement": 1.0,
+      "head_origin": "Reconstructed from the saved full patient-abundance table using the research classifier and split definitions; not an original serialized head. Predictions checked against saved logits.",
+      "fold_original_checks": [
+        {
+          "fold": 1,
+          "max_original_logit_error": 5.104557323498682e-07
+        },
+        {
+          "fold": 2,
+          "max_original_logit_error": 7.007980595830077e-07
+        },
+        {
+          "fold": 3,
+          "max_original_logit_error": 1.423632839780975e-06
+        }
+      ],
+      "max_saved_perturbed_logit_error": 4.338263224212824e-07,
+      "example_manifest": "examples/clinical/manifest.json",
+      "manuscript_scope": "State assignment and Fig. S4D patient-score recalculation from cached states. Does not implement Fig. 5G center-cell insertion/protein reconstruction or rerun the encoder. Three patients, one repeat; manuscript S4D reports 53 patients averaged over five repeats."
+    },
+    "validation": {
+      "device": "CPU",
+      "python": "3.12.7",
+      "platform": "Darwin arm64",
+      "packages": {
+        "torch": "2.15.0",
+        "numpy": "2.5.5",
+        "pandas": "2.3.3",
+        "scipy": "1.18.1",
+        "scikit-learn": "1.9.1",
+        "matplotlib": "3.11.2",
+        "nbclient": "0.11.0"
+      },
+      "notebooks": {
+        "3_downstream_radius_perturbation.ipynb": {
+          "status": "passed",
+          "elapsed_seconds": 15.34,
+          "code_cells": 6
+        },
+        "4_downstream_clinical.ipynb": {
+          "status": "passed",
+          "code_cells": 6,
+          "elapsed_seconds": 8.08
+        }
+      },
+      "unit_tests_passed": 11
+    }
   }
 }

@@ -13,3 +13,4 @@ wandb/
 *.pickle
 *.log
 .ipynb_checkpoints/
+outputs/

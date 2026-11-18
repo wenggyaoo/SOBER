@@ -30,12 +30,14 @@ The [epoch-10 checkpoint](https://github.com/wenggyaoo/SOBER/releases/tag/v0.1.0
 python scripts/download_checkpoint.py
 ```
 
-Two small, real downstream examples use the pretrained student. Their tested Python 3.12 setup is pinned in [tutorial constraints](constraints-tutorials.txt):
+Small downstream examples follow the research analysis. Their tested Python 3.12 setup is pinned in [tutorial constraints](constraints-tutorials.txt):
 
 - [Reconstruction](tutorials/1_downstream_reconstruction.ipynb): masked-marker prediction, a visible-neighbor baseline, and reconstruction metrics.
 - [Cell annotation](tutorials/2_downstream_celltyping.ipynb): frozen embeddings, reference/query KNN, and annotation metrics.
+- [Radius perturbation](tutorials/3_downstream_radius_perturbation.ipynb): replace neighbor expression outside successive distance boundaries and measure reconstruction sensitivity.
+- [Clinical analysis](tutorials/4_downstream_clinical.ipynb): frozen Wang/Meyer state assignment, patient state abundances, and clinical-model scores from cached results.
 
-Both evaluate a patient-held-out UPMC-HNC region; the annotation reference uses 64 cells per coarse class from three training regions. They demonstrate the workflow on a small subset. Model provenance and checksums are recorded in [the model manifest](models/epoch10.json).
+The first three use the pretrained student and a patient-held-out UPMC-HNC region. The clinical example uses bundled intermediate results and needs no checkpoint. These tutorials demonstrate small workflows; they do not reproduce full-cohort manuscript results. Model provenance and checksums are recorded in [the model manifest](models/epoch10.json).
 
 ## Input data
 

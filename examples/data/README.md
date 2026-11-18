@@ -18,7 +18,7 @@ The UPMC-HNC region comes from `three_dataset_demo/s240/UPMC_c001_v001_r001_reg0
 
 Expression values and coordinates are copied unchanged. Cell-type strings come from `UPMC_c001_v001_r001_reg039.cell_types.95-5-4.csv`, the annotation version selected for `s240` in `study_celltype_final.tsv`; the alternative local label files are not used. Headers are standardized and numeric label codes are omitted. All 41 input channels, including DAPI, are retained by the current loader.
 
-Coordinates remain in their native source units. Physical calibration has not been verified for this local export, so the tutorial does not label its axes in micrometres. The local CSVs provide no redistribution license; the external-data licenses below do not cover this example.
+Stored coordinates are unchanged. Tutorials report physical distances using the research convention of two model coordinate units per micrometre (150 µm sampling radius). The local CSVs provide no redistribution license; the external-data licenses below do not cover this example.
 
 ## Downstream examples
 
@@ -27,6 +27,16 @@ The reconstruction and annotation tutorials use `s240/UPMC_c005_v001_r001_reg028
 The query retains all source cells, intensities and native coordinates, with the same `95-5-4` annotation version. Only evaluation centers are subsampled: 128 for reconstruction and 128 query centers for annotation. No model predictions were used to select the regions. These examples do not reproduce the full-cohort manuscript scores. Source checksums and split checks are in [the manifest](manifest.json) and [verification record](verification.json); the internal-data limitations above also apply to this query.
 
 The annotation reference combines the original training region with `UPMC_c002_v001_r001_reg009` (1,489 cells) and `UPMC_c002_v001_r001_reg035` (2,239 cells), stored in [`examples/reference`](../reference). Both additions belong to the saved training partition and retain complete regions, native coordinates, marker values and `95-5-4` labels. They were selected to improve training-label coverage relative to data size, without using query labels or predictions. The tutorial samples 64 reference centers per coarse class (640 total), with seed 42; this balanced reference is distinct from the manuscript's full-atlas sampling protocol. The internal-data limitations above also apply to these regions.
+
+The [radius perturbation tutorial](../../tutorials/3_downstream_radius_perturbation.ipynb) reuses the complete query region. It samples 32 T-cell centers and 128 additional donor candidates with seed 42, then matches two donors per center from the combined pool. Each donor is disjoint from its recipient. All neighbors remain visible; 39 center markers are masked, leaving CD3e and DAPI visible. Replacement preserves recipient coordinates; boundaries and plots use µm, starting from 150 µm.
+
+## Cached clinical examples
+
+[`examples/clinical`](../clinical) contains 2,000 precomputed token-mean embeddings: all cached neighborhoods for the first two patient IDs in lexical order from each of the Wang and Meyer exports. The frozen Wang scaler, PCA and 15-state atlas are retained. Meyer embeddings already include the source workflow's expression alignment to Wang.
+
+The clinical example retains the first three patient IDs from saved C&I fold 1, repeat 0, with full patient state counts and all saved edits under three donor conditions. Its fold-specific logistic head was reconstructed from the original feature table and checked against saved logits; the selected patients were excluded from fitting that head. The tutorial recalculates model scores from cached states and does not rerun the encoder or generate new substitutions.
+
+These files are derived from the local `wang_to_meyer_check` and `wang_C_vs_CI_token_mean` research exports. Selection rules, source checksums and verification results are recorded in [the clinical manifest](../clinical/manifest.json). The bundle provides a computation example, not evidence of a clinical intervention effect.
 
 ## External sources and attribution
 

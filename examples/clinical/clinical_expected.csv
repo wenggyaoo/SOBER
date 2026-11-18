@@ -1,0 +1,13 @@
+patient,condition,logit
+NT003,biologically_matched_context,0.848252237868337
+NT003,source_state_matched_context,0.8373575796596777
+NT003,target_context,0.8373575796596777
+NT003,original,0.8145911349510657
+NT087,biologically_matched_context,2.5126546574193847
+NT087,source_state_matched_context,2.3225279284478475
+NT087,target_context,2.688160958815011
+NT087,original,2.1230323532812783
+NT089,biologically_matched_context,1.3559271504711592
+NT089,source_state_matched_context,1.3365474407711992
+NT089,target_context,1.3866949360231982
+NT089,original,1.258168830488417
