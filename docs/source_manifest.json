@@ -16,5 +16,27 @@
     "data_loader.py": "ff6510b1194625a84eb37c01821844cdf8fafc78f73e1d562c42ab14e8383aec",
     "downstream_split.py": "936699a8ff8cd28bb9761c68668e9381ac7c256acac99a7a096f2ff41b3299c9",
     "demo_run.py": "3f952aeccb9fe3b4eaf79ea355197d3c5de66be966bda07dffab84b2ed35770e"
+  },
+  "downstream_evaluation": {
+    "extracted_on": "2026-11-17",
+    "source_files": {
+      "downstream_reconstruction.py": "ae5184f2fe25974458a147bd8e0058b0f1a432e72a769e542569d72f008e6e5a",
+      "downstream_recon_external.py": "42f6f7672847ab9948666fe93c0118a08628f5d7247c65fb987044daed85b733",
+      "downstream_celltyping.py": "7ec0e7c00017512f0223ace09e2046a464ffef871452b18e18e8fd8398af0833",
+      "downstream_celltyping_external.py": "03dbff7c90d16f8204a1834b5375373226d57ddabe02f04436cfa40287497696",
+      "cell_type_normalize.py": "09a3e32093eb2c44606603d6e5eb7677a0b10d658fddb189a756ceb87b067dce",
+      "celltype_evaluator.py": "ac53a562edc0bc638b4ef03757e4ad7eba6e4ef0f72271509781a1afa5896cdf"
+    },
+    "result_files": {
+      "downstream_reconstruction/reconstruction_metrics.json": "0e4b78a773ce18f4645b29a3ca2878637b1c4cb4a3f7845c2266c07d8f4277ab",
+      "downstream_reconstruction_external_SPORA/external_reconstruction_metrics.json": "a272ab1da55c9a721e34cc3f3a8cc6a1e126cffb99c5abc6c8bdd4b032219df0",
+      "downstream_celltyping/downstream_celltyping_metrics.json": "745e6254df739451f4fb7ec62c5a581051eee5b9beafa4604d16ca5f3d6f1c83",
+      "downstream_celltyping_external_SPORA/downstream_celltyping_external_metrics.json": "c36590142343823b08692980c612f7805094c7a6ab8577ad0a3438e7781ec73f"
+    },
+    "public_module": "sober/evaluation.py",
+    "scope": "Small internal-validation examples. Shared reconstruction masks and visible-neighbor mean; coarse-label stratified sampling, unmasked embeddings, L2 normalization, cosine KNN with uniform voting, accuracy and weighted F1.",
+    "external_protocol_difference": "Full external results additionally use training-reference expression alignment and panel-matched annotation references. The saved external neighbor-mean baseline uses 80% neighbor masking while SOBER uses 20-80%. These internal examples use shared masks and do not implement the full external evaluation.",
+    "marker_policy": "Literal reconstruction exclusions are applied after alias resolution, matching the saved research analysis; no new canonicalization of exclusion names is introduced.",
+    "tutorial_reference": "The annotation tutorial uses a class-balanced reference: 64 centers per coarse class from three recorded training regions. This demonstration sampling differs from the manuscript full-atlas reference; query stratification and KNN/metric definitions are unchanged."
   }
 }

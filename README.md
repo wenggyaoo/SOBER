@@ -10,7 +10,7 @@ The development atlas contains **222.1 million cells across 25 source collection
 
 ![SOBER model architecture](docs/images/model_overview.png)
 
-Training combines **masked protein reconstruction (0.7)**, **EMA teacher–student distillation with a BYOL objective (0.1)**, and **study-aware coarse cell-type InfoNCE (0.2)**, matching the epoch-10 pretrained model. Downstream evaluation code is outside this release.
+Training combines **masked protein reconstruction (0.7)**, **EMA teacher–student distillation with a BYOL objective (0.1)**, and **study-aware coarse cell-type InfoNCE (0.2)**, matching the epoch-10 pretrained model.
 
 ## Installation
 
@@ -20,7 +20,7 @@ Use a Python 3.10+ environment. GPU training requires a CUDA-enabled PyTorch ins
 python -m pip install -r requirements.txt
 ```
 
-The [data loading tutorial](tutorials/data_loading.ipynb) covers real tables, normalization, and spatial neighborhoods using one internal training region (UPMC-HNC) and two external regions (Damond and Meyer). See [example data](examples/data/README.md) for their sources and split membership.
+The [data loading tutorial](tutorials/0_data_loading.ipynb) covers real tables, normalization, and spatial neighborhoods using one internal training region (UPMC-HNC) and two external regions (Damond and Meyer). See [example data](examples/data/README.md) for their sources and split membership.
 
 ## Pretrained model
 
@@ -30,7 +30,12 @@ The [epoch-10 checkpoint](https://github.com/wenggyaoo/SOBER/releases/tag/v0.1.0
 python scripts/download_checkpoint.py
 ```
 
-The [inference tutorial](tutorials/inference.ipynb) extracts cell embeddings and reconstructs masked markers from the included UPMC-HNC region. Model provenance and checksums are recorded in [the model manifest](models/epoch10.json).
+Two small, real downstream examples use the pretrained student. Their tested Python 3.12 setup is pinned in [tutorial constraints](constraints-tutorials.txt):
+
+- [Reconstruction](tutorials/1_downstream_reconstruction.ipynb): masked-marker prediction, a visible-neighbor baseline, and reconstruction metrics.
+- [Cell annotation](tutorials/2_downstream_celltyping.ipynb): frozen embeddings, reference/query KNN, and annotation metrics.
+
+Both evaluate a patient-held-out UPMC-HNC region; the annotation reference uses 64 cells per coarse class from three training regions. They demonstrate the workflow on a small subset. Model provenance and checksums are recorded in [the model manifest](models/epoch10.json).
 
 ## Input data
 

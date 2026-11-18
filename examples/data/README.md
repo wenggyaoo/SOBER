@@ -1,6 +1,6 @@
 # Example data
 
-Three complete tissue regions are included for the [data loading tutorial](../../tutorials/data_loading.ipynb).
+Three complete tissue regions are included for the [data loading tutorial](../../tutorials/0_data_loading.ipynb).
 
 | Collection | Role in SOBER | Platform | Region | Cells | Marker columns |
 | --- | --- | --- | --- | ---: | ---: |
@@ -19,6 +19,14 @@ The UPMC-HNC region comes from `three_dataset_demo/s240/UPMC_c001_v001_r001_reg0
 Expression values and coordinates are copied unchanged. Cell-type strings come from `UPMC_c001_v001_r001_reg039.cell_types.95-5-4.csv`, the annotation version selected for `s240` in `study_celltype_final.tsv`; the alternative local label files are not used. Headers are standardized and numeric label codes are omitted. All 41 input channels, including DAPI, are retained by the current loader.
 
 Coordinates remain in their native source units. Physical calibration has not been verified for this local export, so the tutorial does not label its axes in micrometres. The local CSVs provide no redistribution license; the external-data licenses below do not cover this example.
+
+## Downstream examples
+
+The reconstruction and annotation tutorials use `s240/UPMC_c005_v001_r001_reg028` in [`examples/downstream`](../downstream) as the query (1,673 cells, 41 marker columns). This is the smallest complete locally available UPMC-HNC region in the saved **internal-validation** partition. The recorded patient split places reference and query in different partitions and reports zero patient overlap.
+
+The query retains all source cells, intensities and native coordinates, with the same `95-5-4` annotation version. Only evaluation centers are subsampled: 128 for reconstruction and 128 query centers for annotation. No model predictions were used to select the regions. These examples do not reproduce the full-cohort manuscript scores. Source checksums and split checks are in [the manifest](manifest.json) and [verification record](verification.json); the internal-data limitations above also apply to this query.
+
+The annotation reference combines the original training region with `UPMC_c002_v001_r001_reg009` (1,489 cells) and `UPMC_c002_v001_r001_reg035` (2,239 cells), stored in [`examples/reference`](../reference). Both additions belong to the saved training partition and retain complete regions, native coordinates, marker values and `95-5-4` labels. They were selected to improve training-label coverage relative to data size, without using query labels or predictions. The tutorial samples 64 reference centers per coarse class (640 total), with seed 42; this balanced reference is distinct from the manuscript's full-atlas sampling protocol. The internal-data limitations above also apply to these regions.
 
 ## External sources and attribution
 

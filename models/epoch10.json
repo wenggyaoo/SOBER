@@ -63,7 +63,164 @@
     },
     "python": "3.12.7",
     "platform": "macOS-15.3.2-arm64-arm-64bit",
-    "inference_notebook": "Executed all cells on CPU; 16 cell embeddings (512 dimensions) and 512 masked marker predictions.",
-    "training_smoke_test": "One optimizer step on a reduced-width model using real example regions; reconstruction, BYOL and coarse InfoNCE losses were positive and finite, and the EMA teacher was active."
+    "training_smoke_test": "One optimizer step on a reduced-width model using real example regions; reconstruction, BYOL and coarse InfoNCE losses were positive and finite, and the EMA teacher was active.",
+    "downstream_tutorials": {
+      "executed_on": "2026-11-17",
+      "device": "cpu",
+      "python": "3.12.7",
+      "torch": "2.15.0",
+      "reconstruction": {
+        "centers": 128,
+        "masked_entries": 4096,
+        "scored_entries": 3496
+      },
+      "cell_annotation": {
+        "reference_centers": 640,
+        "query_centers": 128,
+        "embedding_dimensions": 512,
+        "k": 10,
+        "reference_regions": 3,
+        "reference_centers_per_coarse_class": 64,
+        "reference_sampling": "Class-balanced training reference for the tutorial; seed 42",
+        "query_cells_labels_and_embeddings_unchanged": true,
+        "accuracy": 0.96875,
+        "f1_weighted": 0.9694758366633366
+      },
+      "reference_function_checks": {
+        "reconstruction_reference_function": "downstream_reconstruction.py:run_transformer_reconstruction + predict_neighbor_mean",
+        "centers_checked": 32,
+        "masked_entries_checked": 1024,
+        "prediction_max_absolute_difference": 0.0,
+        "neighbor_mean_max_absolute_difference": 0.0,
+        "stratified_center_indices_match": true,
+        "knn_accuracy_and_weighted_f1_match_research_function": true,
+        "internal_saved_prediction_rows": 174861,
+        "internal_saved_metrics_absolute_difference": {
+          "transformer": {
+            "n": 0,
+            "pearson_r": 6.661338147750939e-16,
+            "spearman_r": 0.0,
+            "mse": 5.551115123125783e-17
+          },
+          "baseline_celltype_mean": {
+            "n": 0,
+            "pearson_r": 3.3306690738754696e-16,
+            "spearman_r": 0.0,
+            "mse": 0.0
+          },
+          "baseline_neighbor_mean": {
+            "n": 0,
+            "pearson_r": 5.551115123125783e-16,
+            "spearman_r": 0.0,
+            "mse": 2.220446049250313e-16
+          },
+          "baseline_closest_neighbor": {
+            "n": 0,
+            "pearson_r": 2.220446049250313e-15,
+            "spearman_r": 0.0,
+            "mse": 0.0
+          },
+          "baseline_center_ridge": {
+            "n": 0,
+            "pearson_r": 2.220446049250313e-16,
+            "spearman_r": 0.0,
+            "mse": 0.0
+          },
+          "baseline_neighbor_mlp": {
+            "n": 0,
+            "pearson_r": 1.4432899320127035e-15,
+            "spearman_r": 0.0,
+            "mse": 1.1102230246251565e-16
+          }
+        },
+        "external_saved_celltype_marker_metrics_checked": 2040
+      },
+      "scikit_learn": "1.9.1"
+    },
+    "reviewer_audit": {
+      "date": "2026-11-17",
+      "environment": {
+        "isolated_environment": true,
+        "python": "3.12.7",
+        "platform": "macOS-15.3.2-arm64-arm-64bit",
+        "device": "cpu",
+        "packages": {
+          "torch": "2.15.0",
+          "numpy": "2.5.5",
+          "pandas": "2.3.3",
+          "scipy": "1.18.1",
+          "scikit-learn": "1.9.1",
+          "matplotlib": "3.11.2",
+          "jupyterlab": "4.6.6",
+          "ipykernel": "7.4.0",
+          "nbclient": "0.11.0",
+          "nbformat": "5.11.1"
+        }
+      },
+      "notebook_execution": {
+        "data_loading": {
+          "seconds": 29.92,
+          "code_cells": 9
+        },
+        "downstream_reconstruction": {
+          "seconds": 7.57,
+          "code_cells": 6
+        },
+        "downstream_celltyping": {
+          "seconds": 9.73,
+          "code_cells": 6
+        }
+      },
+      "data_and_inference": {
+        "source_tables": [
+          {
+            "region": "UPMC_c001_v001_r001_reg039",
+            "cells": 1670,
+            "source_csv_values_and_cell_order_match": true
+          },
+          {
+            "region": "UPMC_c002_v001_r001_reg009",
+            "cells": 1489,
+            "source_csv_values_and_cell_order_match": true
+          },
+          {
+            "region": "UPMC_c002_v001_r001_reg035",
+            "cells": 2239,
+            "source_csv_values_and_cell_order_match": true
+          },
+          {
+            "region": "UPMC_c005_v001_r001_reg028",
+            "cells": 1673,
+            "source_csv_values_and_cell_order_match": true
+          }
+        ],
+        "reference_query_cell_id_overlap": 0,
+        "checkpoint_and_all_mapping_assets_match": true,
+        "query_annotations_do_not_change_embeddings": true,
+        "model_weights_unchanged_by_inference": true,
+        "reference_classes": 10,
+        "reference_centers_per_class": 64,
+        "query_cells_and_predictions_match_previous_environment": true,
+        "confusion_matrix_metrics_recomputed_independently": {
+          "accuracy": 0.96875,
+          "f1_weighted": 0.9694758366633366
+        },
+        "runtime_manifest_hash_and_versions_match": true,
+        "no_machine_specific_paths_in_notebook_sources": true
+      },
+      "parameter_check": {
+        "passed": true,
+        "cwd": "repository root",
+        "seed": 17,
+        "reference_centers": 320,
+        "query_centers": 16,
+        "k": 5,
+        "run_metadata_matches_parameters": true,
+        "figure_exported_by_notebook": true
+      },
+      "unit_tests_passed": 7,
+      "reference_design_refined_after_initial_query_inspection": true,
+      "scope": "Executable demonstration, not an independent benchmark or full manuscript reproduction. CPU was tested; GPU execution was not tested."
+    }
   }
 }

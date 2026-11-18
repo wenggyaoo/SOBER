@@ -135,5 +135,202 @@
       }
     }
   ],
-  "verification_file": "verification.json"
+  "verification_file": "verification.json",
+  "downstream_examples": {
+    "reference_folder": "s240/UPMC_c001_v001_r001_reg039",
+    "query": {
+      "study": "s240",
+      "region": "UPMC_c005_v001_r001_reg028",
+      "label": "UPMC-HNC (s240)",
+      "scope": "Internal validation",
+      "platform": "PhenoCycler (CODEX)",
+      "cells": 1673,
+      "raw_markers": 41,
+      "author_label_categories": 15,
+      "source_folder": "three_dataset_demo/s240/UPMC_c005_v001_r001_reg028",
+      "paper_doi": "10.1038/s41551-022-00951-w",
+      "license": "Not specified in the supplied local CSVs; external-example CC-BY-4.0 licenses do not apply.",
+      "source_annotation_version": "95-5-4",
+      "source_annotation_file": "UPMC_c005_v001_r001_reg028.cell_types.95-5-4.csv",
+      "preparation": "Copy supplied expression values and native coordinates unchanged; rename headers and export ANNOTATION_LABEL from the training-selected 95-5-4 file. No additional normalization, channel removal, or coordinate scaling.",
+      "microns_per_model_unit": null,
+      "coordinate_scale_from_source": 1,
+      "coordinate_scale_evidence": "Native coordinates retained. Physical calibration has not been verified for this local export; the tutorial plots source units.",
+      "split_membership": "validation_regions; absent from train_regions in the saved patient split.",
+      "split_file": "training_contrastive_patient_300/train_test_split.json",
+      "split_file_sha256": "94f8d0bf9c4cf8a4aea81ad58a83d2ef89adc55562f417eb8f89203b4fc6056b",
+      "split_unit": "patient",
+      "split_seed": 42,
+      "folder": "../downstream/s240/UPMC_c005_v001_r001_reg028",
+      "files": {
+        "cell_data.csv": {
+          "sha256": "4990e56085227f20e25510967d204fd3b1f41f2d0bdc57cf39415543bdc0ad05",
+          "source_csv": "cell_data.csv",
+          "source_csv_sha256": "8280bac106518cc41dcea16a422b9ee87026d0646cce858757fa5309962b6e01",
+          "rows": 1673
+        },
+        "expression.csv": {
+          "sha256": "215edf5e710701ac96df1b6c8988de589926705b8ca547af3cadc3d91160bff2",
+          "source_csv": "expression.csv",
+          "source_csv_sha256": "05313c00ef7bc1f2990a3d3c70b16377af26368300c81c7f514a5616f9d71961",
+          "rows": 1673
+        },
+        "cell_type.csv": {
+          "sha256": "a2c2a9618786ee924798ae6937d3d3ef112f44199c59af120625875ae12cfb7f",
+          "source_csv": "UPMC_c005_v001_r001_reg028.cell_types.95-5-4.csv",
+          "source_csv_sha256": "5e133b577c276fffaf8d456df580b35bbd7d716cb96f54922cab9aef37b2770e",
+          "rows": 1673
+        }
+      }
+    },
+    "selection": "Query: smallest complete s240 region locally available in the saved patient-held-out validation partition; ties broken by region name. Reference: existing training example. Selection does not use model predictions.",
+    "split_patient_overlap_count": 0,
+    "annotation_reference": {
+      "folders": [
+        "s240/UPMC_c001_v001_r001_reg039",
+        "../reference/s240/UPMC_c002_v001_r001_reg009",
+        "../reference/s240/UPMC_c002_v001_r001_reg035"
+      ],
+      "additional_regions": [
+        {
+          "study": "s240",
+          "region": "UPMC_c002_v001_r001_reg009",
+          "label": "UPMC-HNC (s240)",
+          "scope": "Internal training",
+          "platform": "PhenoCycler (CODEX)",
+          "cells": 1489,
+          "raw_markers": 41,
+          "author_label_categories": 14,
+          "source_folder": "three_dataset_demo/s240/UPMC_c002_v001_r001_reg009",
+          "paper_doi": "10.1038/s41551-022-00951-w",
+          "license": "Not specified in the supplied local CSVs; external-example CC-BY-4.0 licenses do not apply.",
+          "source_annotation_version": "95-5-4",
+          "source_annotation_file": "UPMC_c002_v001_r001_reg009.cell_types.95-5-4.csv",
+          "preparation": "Copy supplied expression values and native coordinates unchanged; rename headers and export ANNOTATION_LABEL from the training-selected 95-5-4 file. No additional normalization, channel removal, or coordinate scaling.",
+          "microns_per_model_unit": null,
+          "coordinate_scale_from_source": 1,
+          "coordinate_scale_evidence": "Native coordinates retained. Physical calibration has not been verified for this local export; the tutorial plots source units.",
+          "split_membership": "train_regions; absent from validation_regions in the saved patient split.",
+          "split_file": "training_contrastive_patient_300/train_test_split.json",
+          "split_file_sha256": "94f8d0bf9c4cf8a4aea81ad58a83d2ef89adc55562f417eb8f89203b4fc6056b",
+          "split_unit": "patient",
+          "split_seed": 42,
+          "folder": "../reference/s240/UPMC_c002_v001_r001_reg009",
+          "files": {
+            "cell_data.csv": {
+              "sha256": "19eb9b7fce7272c07ace1b8111bad77d7917ff0ff514ec476c48d6871fe0a90b",
+              "source_csv": "cell_data.csv",
+              "source_csv_sha256": "cd43f9e5c89630e412710286789de0f2279f3c0a816c94e7cb6314a327e98b4b",
+              "rows": 1489
+            },
+            "expression.csv": {
+              "sha256": "943577561a6e019700f46319b67848b24ae0b10e4a548d311d462ee24d67b2a5",
+              "source_csv": "expression.csv",
+              "source_csv_sha256": "57b81a7a260bdca55aad003308719765a3d3ad290844d8a0a6435faee2ddbc88",
+              "rows": 1489
+            },
+            "cell_type.csv": {
+              "sha256": "31858826ca4f8bbb9213c1e23cd5f3ec48d410958977595794183f00ee1657b4",
+              "source_csv": "UPMC_c002_v001_r001_reg009.cell_types.95-5-4.csv",
+              "source_csv_sha256": "d3a9a0dfbab8fe9a58907a33fc31ced6ae8c90c26f8196cb20edf143b60cff8d",
+              "rows": 1489
+            }
+          }
+        },
+        {
+          "study": "s240",
+          "region": "UPMC_c002_v001_r001_reg035",
+          "label": "UPMC-HNC (s240)",
+          "scope": "Internal training",
+          "platform": "PhenoCycler (CODEX)",
+          "cells": 2239,
+          "raw_markers": 41,
+          "author_label_categories": 15,
+          "source_folder": "three_dataset_demo/s240/UPMC_c002_v001_r001_reg035",
+          "paper_doi": "10.1038/s41551-022-00951-w",
+          "license": "Not specified in the supplied local CSVs; external-example CC-BY-4.0 licenses do not apply.",
+          "source_annotation_version": "95-5-4",
+          "source_annotation_file": "UPMC_c002_v001_r001_reg035.cell_types.95-5-4.csv",
+          "preparation": "Copy supplied expression values and native coordinates unchanged; rename headers and export ANNOTATION_LABEL from the training-selected 95-5-4 file. No additional normalization, channel removal, or coordinate scaling.",
+          "microns_per_model_unit": null,
+          "coordinate_scale_from_source": 1,
+          "coordinate_scale_evidence": "Native coordinates retained. Physical calibration has not been verified for this local export; the tutorial plots source units.",
+          "split_membership": "train_regions; absent from validation_regions in the saved patient split.",
+          "split_file": "training_contrastive_patient_300/train_test_split.json",
+          "split_file_sha256": "94f8d0bf9c4cf8a4aea81ad58a83d2ef89adc55562f417eb8f89203b4fc6056b",
+          "split_unit": "patient",
+          "split_seed": 42,
+          "folder": "../reference/s240/UPMC_c002_v001_r001_reg035",
+          "files": {
+            "cell_data.csv": {
+              "sha256": "9c7bf3f13255038db50f4682aed837a5cde2608cab3d6f0c90675065fe3247b2",
+              "source_csv": "cell_data.csv",
+              "source_csv_sha256": "f254b780978ec9fbed3bbe05bb0acf81d30269b2910579fd45893f99a6560a33",
+              "rows": 2239
+            },
+            "expression.csv": {
+              "sha256": "7147da45c687341b4647a96e627f57bbf67a31c5fe75724c5c27acccc7031502",
+              "source_csv": "expression.csv",
+              "source_csv_sha256": "164ef7be043deeba7acd4ab76c93ccfb4636e6d7e5204fbfb102258eee2754aa",
+              "rows": 2239
+            },
+            "cell_type.csv": {
+              "sha256": "877bfa90798f8e7720e312de81029ee459a7ed5864012c86fe3b563470835a28",
+              "source_csv": "UPMC_c002_v001_r001_reg035.cell_types.95-5-4.csv",
+              "source_csv_sha256": "caa0d4f319fe4d94d9765f284dbe735596c8b4a97da6efea6eb0b4570805f501",
+              "rows": 2239
+            }
+          }
+        }
+      ],
+      "selection": "Keep the existing reference; greedily add training regions of at most 5000 cells, maximizing the sum of per-class shortfall coverage toward 64 centers per class divided by region cell count. Break ties by cell count, then region name. Stop when every class reaches 64 cells, or after five total regions. No query labels, embeddings or predictions are used.",
+      "sampling": "Uniformly sample 64 centers per coarse class without replacement across the three training regions; seed 42. Query centers and K=10 remain unchanged.",
+      "centers_per_class": 64,
+      "available_class_counts": {
+        "Granulocytes": 517,
+        "Macrophages": 850,
+        "Epithelial cells": 2245,
+        "NK cells": 99,
+        "Stromal cells": 600,
+        "Mast cells": 123,
+        "B cells": 261,
+        "T cells": 174,
+        "Monocytes": 96,
+        "Endothelial cells": 199
+      }
+    },
+    "recorded_split": {
+      "source_sha256": "94f8d0bf9c4cf8a4aea81ad58a83d2ef89adc55562f417eb8f89203b4fc6056b",
+      "unit": "patient",
+      "regions": [
+        {
+          "region": "UPMC_c001_v001_r001_reg039",
+          "patient_group_sha256": "7250a9d093e51c7f3de818e7521eb4b256b83563fcde5468a2bdbdfeba99674e",
+          "partition": "train",
+          "study": "s240"
+        },
+        {
+          "region": "UPMC_c002_v001_r001_reg009",
+          "patient_group_sha256": "90cd5fc762c41f294a955c3155bfa03988d6c5cd3393b07097cdea650ac3aaa2",
+          "partition": "train",
+          "study": "s240"
+        },
+        {
+          "region": "UPMC_c002_v001_r001_reg035",
+          "patient_group_sha256": "f510d847322956a950ea1e7e26c7ac167b9d4992213c7b17778d1e83399fdfd4",
+          "partition": "train",
+          "study": "s240"
+        },
+        {
+          "region": "UPMC_c005_v001_r001_reg028",
+          "patient_group_sha256": "d94fe9620bf95a6b7a64614739ffd12bd8bafb96504b681821bcb00356660a2b",
+          "partition": "validation",
+          "study": "s240"
+        }
+      ],
+      "patient_group_source": "patient_level_suite_focused/retrieval/internal/s240_hpv_positive/seed_1/retrieval_region_manifest.csv",
+      "patient_group_source_sha256": "b22291efeef78d3c12d7abca4f9d936897a0a5487c22d1947a1e7d18fcfee0ba",
+      "patient_split_metrics_sha256": "d6ea33b8a72effb8f0455992c7e0dfdba285983736b35afdbb8712bb5bf34cf6"
+    }
+  }
 }

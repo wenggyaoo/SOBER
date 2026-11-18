@@ -104,5 +104,73 @@
     "split_file": "training_contrastive_patient_300/train_test_split.json",
     "split_file_sha256": "94f8d0bf9c4cf8a4aea81ad58a83d2ef89adc55562f417eb8f89203b4fc6056b",
     "limitation": "Verified against the supplied local tables and recorded split, not against acquisition-level raw images or an independent public data deposit. Physical coordinate calibration and redistribution license are not established by these CSVs."
+  },
+  "downstream_query_check": {
+    "verified_on": "2026-11-17",
+    "study": "s240",
+    "region": "UPMC_c005_v001_r001_reg028",
+    "cells": 1673,
+    "complete_local_region": true,
+    "all_exported_values_match_local_source_as_strings": true,
+    "annotation_version": "95-5-4",
+    "in_train_regions": false,
+    "in_validation_regions": true,
+    "split_unit": "patient",
+    "split_file_sha256": "94f8d0bf9c4cf8a4aea81ad58a83d2ef89adc55562f417eb8f89203b4fc6056b",
+    "recorded_split_patient_overlap_count": 0,
+    "locally_available_validation_regions": 47,
+    "selection": "Smallest complete validation region; no model-performance selection."
+  },
+  "annotation_reference_checks": {
+    "verified_on": "2026-11-17",
+    "added_regions": [
+      "UPMC_c002_v001_r001_reg009",
+      "UPMC_c002_v001_r001_reg035"
+    ],
+    "all_exported_values_match_local_source_as_strings": true,
+    "all_regions_complete": true,
+    "cell_ids_unique_and_aligned": true,
+    "annotation_version": "95-5-4",
+    "all_in_train_regions": true,
+    "none_in_validation_regions": true,
+    "split_file_sha256": "94f8d0bf9c4cf8a4aea81ad58a83d2ef89adc55562f417eb8f89203b4fc6056b",
+    "selection_uses_query_labels_or_predictions": false,
+    "centers_per_coarse_class": 64
+  },
+  "reviewer_patient_split_check": {
+    "date": "2026-11-17",
+    "mapping_source": {
+      "source": "patient_level_suite_focused/retrieval/internal/s240_hpv_positive/seed_1/retrieval_region_manifest.csv",
+      "source_sha256": "b22291efeef78d3c12d7abca4f9d936897a0a5487c22d1947a1e7d18fcfee0ba",
+      "regions": [
+        {
+          "region": "UPMC_c001_v001_r001_reg039",
+          "patient_group_sha256": "7250a9d093e51c7f3de818e7521eb4b256b83563fcde5468a2bdbdfeba99674e",
+          "partition": "train"
+        },
+        {
+          "region": "UPMC_c002_v001_r001_reg009",
+          "patient_group_sha256": "90cd5fc762c41f294a955c3155bfa03988d6c5cd3393b07097cdea650ac3aaa2",
+          "partition": "train"
+        },
+        {
+          "region": "UPMC_c002_v001_r001_reg035",
+          "patient_group_sha256": "f510d847322956a950ea1e7e26c7ac167b9d4992213c7b17778d1e83399fdfd4",
+          "partition": "train"
+        },
+        {
+          "region": "UPMC_c005_v001_r001_reg028",
+          "patient_group_sha256": "d94fe9620bf95a6b7a64614739ffd12bd8bafb96504b681821bcb00356660a2b",
+          "partition": "validation"
+        }
+      ],
+      "patient_split_metrics_sha256": "d6ea33b8a72effb8f0455992c7e0dfdba285983736b35afdbb8712bb5bf34cf6",
+      "group_membership_matches_saved_patient_partition": true
+    },
+    "reference_patients": 3,
+    "query_patients": 1,
+    "reference_query_patient_overlap": 0,
+    "reference_query_cell_id_overlap": 0,
+    "all_four_region_csv_values_match_original_sources": true
   }
 }
